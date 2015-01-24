@@ -1,4 +1,4 @@
-namespace MyWeb.Models
+namespace UmbracoCodeGenDemo.Models.MediaTypes
 {
     using System;
     using Umbraco.CodeGen.Annotations;
@@ -10,7 +10,7 @@ namespace MyWeb.Models
                 base(content)
         {
         }
-        [GenericProperty(DisplayName="Upload image", Definition="Textstring", Tab="Image")]
+        [GenericProperty(DisplayName="Upload image", Definition="Upload", Tab="Image")]
         public virtual String UmbracoFile
         {
             get
@@ -18,7 +18,7 @@ namespace MyWeb.Models
                 return GetValue<String>("umbracoFile");
             }
         }
-        [GenericProperty(DisplayName="Width", Definition="Textstring", Tab="Image")]
+        [GenericProperty(DisplayName="Width", Definition="Label", Tab="Image")]
         public virtual String UmbracoWidth
         {
             get
@@ -26,7 +26,7 @@ namespace MyWeb.Models
                 return GetValue<String>("umbracoWidth");
             }
         }
-        [GenericProperty(DisplayName="Height", Definition="Textstring", Tab="Image")]
+        [GenericProperty(DisplayName="Height", Definition="Label", Tab="Image")]
         public virtual String UmbracoHeight
         {
             get
@@ -34,7 +34,7 @@ namespace MyWeb.Models
                 return GetValue<String>("umbracoHeight");
             }
         }
-        [GenericProperty(DisplayName="Size", Definition="Textstring", Tab="Image")]
+        [GenericProperty(DisplayName="Size", Definition="Label", Tab="Image")]
         public virtual String UmbracoBytes
         {
             get
@@ -42,7 +42,7 @@ namespace MyWeb.Models
                 return GetValue<String>("umbracoBytes");
             }
         }
-        [GenericProperty(DisplayName="Type", Definition="Textstring", Tab="Image")]
+        [GenericProperty(DisplayName="Type", Definition="Label", Tab="Image")]
         public virtual String UmbracoExtension
         {
             get

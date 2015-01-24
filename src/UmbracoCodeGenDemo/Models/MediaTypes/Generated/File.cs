@@ -1,4 +1,4 @@
-namespace MyWeb.Models
+namespace UmbracoCodeGenDemo.Models.MediaTypes
 {
     using System;
     using Umbraco.CodeGen.Annotations;
@@ -10,7 +10,7 @@ namespace MyWeb.Models
                 base(content)
         {
         }
-        [GenericProperty(DisplayName="Upload file", Definition="Textstring", Tab="File")]
+        [GenericProperty(DisplayName="Upload file", Definition="Upload", Tab="File")]
         public virtual String UmbracoFile
         {
             get
@@ -18,7 +18,7 @@ namespace MyWeb.Models
                 return GetValue<String>("umbracoFile");
             }
         }
-        [GenericProperty(DisplayName="Type", Definition="Textstring", Tab="File")]
+        [GenericProperty(DisplayName="Type", Definition="Label", Tab="File")]
         public virtual String UmbracoExtension
         {
             get
@@ -26,7 +26,7 @@ namespace MyWeb.Models
                 return GetValue<String>("umbracoExtension");
             }
         }
-        [GenericProperty(DisplayName="Size", Definition="Textstring", Tab="File")]
+        [GenericProperty(DisplayName="Size", Definition="Label", Tab="File")]
         public virtual String UmbracoBytes
         {
             get

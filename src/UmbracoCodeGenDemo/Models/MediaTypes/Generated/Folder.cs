@@ -1,4 +1,4 @@
-namespace MyWeb.Models
+namespace UmbracoCodeGenDemo.Models.MediaTypes
 {
     using System;
     using Umbraco.CodeGen.Annotations;
@@ -13,7 +13,7 @@ namespace MyWeb.Models
                 base(content)
         {
         }
-        [GenericProperty(DisplayName="Contents:", Definition="Textstring", Tab="Contents")]
+        [GenericProperty(DisplayName="Contents:", Definition="Folder Browser", Tab="Contents")]
         public virtual String Contents
         {
             get
