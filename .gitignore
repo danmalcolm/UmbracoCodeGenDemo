@@ -11,7 +11,9 @@
 *.sln.docstates
 
 # Build results
-
+Logs/
+TEMP/
+umbraco.config
 [Dd]ebug/
 [Rr]elease/
 x64/
