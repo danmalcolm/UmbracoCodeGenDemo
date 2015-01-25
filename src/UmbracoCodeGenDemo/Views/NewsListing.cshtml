@@ -1,4 +1,11 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-@{
-    Layout = null;
-}
+﻿@inherits DocumentTemplate<NewsListing>
+@Document.Content
+<ul>
+    @{
+        var articles = Umbraco.TypedContentAtXPath("//NewsArticle").Select(x => new NewsArticle(x));
+        foreach (var article in articles)
+        {
+            <li>@article.Title - <a href="@article.Url">read more</a></li>
+        }
+    }
+</ul>

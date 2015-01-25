@@ -10,8 +10,12 @@
 *.user
 *.sln.docstates
 
-# Build results
+# Umbraco local data
+src/UmbracoCodeGenDemo/media/*
 Logs/
+uSync.Archive
+
+# Build results
 TEMP/
 umbraco.config
 [Dd]ebug/
