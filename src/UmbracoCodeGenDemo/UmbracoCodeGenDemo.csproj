@@ -1748,6 +1748,51 @@
     </Content>
     <Content Include="Views\NewsArticle.cshtml" />
     <Content Include="Views\NewsListing.cshtml" />
+    <Content Include="uSync\DataTypeDefinition\Approved Color.config" />
+    <Content Include="uSync\DataTypeDefinition\Checkbox list.config" />
+    <Content Include="uSync\DataTypeDefinition\Content Picker.config" />
+    <Content Include="uSync\DataTypeDefinition\Date Picker with time.config" />
+    <Content Include="uSync\DataTypeDefinition\Date Picker.config" />
+    <Content Include="uSync\DataTypeDefinition\Dropdown multiple.config" />
+    <Content Include="uSync\DataTypeDefinition\Dropdown.config" />
+    <Content Include="uSync\DataTypeDefinition\Folder Browser.config" />
+    <Content Include="uSync\DataTypeDefinition\Image Cropper.config" />
+    <Content Include="uSync\DataTypeDefinition\Label.config" />
+    <Content Include="uSync\DataTypeDefinition\List View - Content.config" />
+    <Content Include="uSync\DataTypeDefinition\List View - Media.config" />
+    <Content Include="uSync\DataTypeDefinition\List View - Members.config" />
+    <Content Include="uSync\DataTypeDefinition\Media Picker.config" />
+    <Content Include="uSync\DataTypeDefinition\Member Picker.config" />
+    <Content Include="uSync\DataTypeDefinition\Multiple Media Picker.config" />
+    <Content Include="uSync\DataTypeDefinition\Numeric.config" />
+    <Content Include="uSync\DataTypeDefinition\Radiobox.config" />
+    <Content Include="uSync\DataTypeDefinition\Related Links.config" />
+    <Content Include="uSync\DataTypeDefinition\Richtext editor.config" />
+    <Content Include="uSync\DataTypeDefinition\Tags.config" />
+    <Content Include="uSync\DataTypeDefinition\Textbox multiple.config" />
+    <Content Include="uSync\DataTypeDefinition\Textstring.config" />
+    <Content Include="uSync\DataTypeDefinition\Truefalse.config" />
+    <Content Include="uSync\DataTypeDefinition\Upload.config" />
+    <Content Include="uSync\DocumentType\Page\ContentPage\def.config" />
+    <Content Include="uSync\DocumentType\Page\ContentPage\HomePage\def.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="uSync\DocumentType\Page\ContentPage\NewsArticle\def.config" />
+    <Content Include="uSync\DocumentType\Page\ContentPage\NewsListing\def.config" />
+    <Content Include="uSync\DocumentType\Page\def.config" />
+    <Content Include="uSync\Language\en-US.config" />
+    <Content Include="uSync\MediaType\File\def.config" />
+    <Content Include="uSync\MediaType\Folder\def.config" />
+    <Content Include="uSync\MediaType\Image\def.config" />
+    <Content Include="uSync\Template\ContentPage\ContentPage.config" />
+    <Content Include="uSync\Template\HomePage\HomePage.config" />
+    <Content Include="uSync\Template\NewItem\NewItem.config" />
+    <Content Include="uSync\Template\NewsArticle\NewsArticle.config" />
+    <Content Include="uSync\Template\NewsItem\NewsItem.config" />
+    <Content Include="uSync\Template\NewsListing\NewsListing.config" />
+    <Content Include="App_Browsers\Form.browser" />
+    <Content Include="App_Browsers\w3cvalidator.browser" />
+    <Content Include="App_Data\packages\installed\installedPackages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1773,7 +1818,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates\DocumentTemplate.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\packages\created\" />
+    <Folder Include="uSync\DocumentType\Page\NewItem\" />
+    <Folder Include="Views\MacroPartials\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
