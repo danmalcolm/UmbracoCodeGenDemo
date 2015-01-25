@@ -12,11 +12,11 @@ namespace UmbracoCodeGenDemo.Models.DocumentTypes
         {
         }
         [GenericProperty(Description="Main content", Definition="Richtext editor", Tab="Content")]
-        public virtual System.Web.IHtmlString Content
+        public virtual System.Web.IHtmlString MainContent
         {
             get
             {
-                return GetValue<System.Web.IHtmlString>("content");
+                return GetValue<System.Web.IHtmlString>("mainContent");
             }
         }
     }

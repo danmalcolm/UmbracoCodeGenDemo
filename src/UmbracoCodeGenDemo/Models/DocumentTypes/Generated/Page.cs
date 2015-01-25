@@ -18,5 +18,13 @@ namespace UmbracoCodeGenDemo.Models.DocumentTypes
                 return GetValue<String>("title");
             }
         }
+        [GenericProperty(Definition="Textstring", Tab="Content")]
+        public virtual String MetaDescription
+        {
+            get
+            {
+                return GetValue<String>("metaDescription");
+            }
+        }
     }
 }

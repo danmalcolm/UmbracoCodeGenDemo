@@ -1,18 +1,21 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits DocumentTemplate<UmbracoCodeGenDemo.Models.DocumentTypes.Page>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
-    <title>@CurrentPage.Title</title>
-    <meta name="description" content="UmbracoCodeGenDemo">
-    <meta name="author" content="SitePoint">
-
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="@Document.MetaDescription"/>
+    <title>@Document.Title</title>
 
 </head>
-
     <body>
-        @RenderBody()
+        <header>
+            <nav>
+                Umbraco CodeGen Demo - <a href="/">Home</a> | <a href="/news">News</a>
+            </nav>
+        </header>
+        <section>
+            <h1>@Document.Title</h1>
+            @RenderBody()
+        </section>
     </body>
 </html>
