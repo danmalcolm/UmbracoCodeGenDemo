@@ -35,8 +35,8 @@ _ReSharper*/
 .*crunch*.local.xml
 
 # NuGet Packages Directory
-## TODO: If you have NuGet Package Restore enabled, uncomment the next line
-packages/
+## TODO: If you want to use NuGet Package Restore, uncomment the next line
+## packages/
 
 # Backup & report files from converting an old project file to a newer
 # Visual Studio version. Backup files are not needed, because we have git ;-)
