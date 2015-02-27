@@ -7,12 +7,14 @@ set dbserver=(localdb)\v11.0
 set setup_dir=%~dp0
 set dbname=UmbracoCodeGenDemo
 
-sqllocaldb start v11.0 REM Ensure localdb is running - comment out if using a different server
+REM Ensure localdb is running - change or comment out if using a different server
+sqllocaldb start v11.0 
 
 ECHO.
 ECHO What do you want to do?
 ECHO.
 ECHO 1. Set up database used for local development
+ECHO    (replacing %dbname% on %dbserver% if it exists)
 ECHO.
 ECHO 2. Remove database
 ECHO.
@@ -24,11 +26,7 @@ IF ERRORLEVEL 2 GOTO :Reset
 IF ERRORLEVEL 1 GOTO :Install
 
 :Install
-REM Copy of original database file - in-use .mdf / .ldf files ignored by version control
-copy "%setup_dir%%dbname%.mdf.original" "%setup_dir%%dbname%.mdf"
-set mdffile=%setup_dir%%dbname%.mdf
-
-"%sqlcmd%" -E -S %dbserver% -Q "EXEC sp_attach_single_file_db @dbname='%dbname%', @physname=N'%mdffile%'"
+"%sqlcmd%" -S %dbserver% -E -v DatabaseName="%dbname%" -v BackupDirectoryPath="%setup_dir%" -i restore.sql
 goto :End
 
 
